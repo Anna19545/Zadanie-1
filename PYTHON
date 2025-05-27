@@ -1,0 +1,27 @@
+# Pobranie pierwszej liczby od użytkownika
+liczba1 = float(input("Podaj pierwszą liczbę: "))
+
+# Pobranie drugiej liczby od użytkownika
+liczba2 = float(input("Podaj drugą liczbę: "))
+
+# Pobranie operacji arytmetycznej
+operacja = input("Wybierz operację (+, -, * lub /): ")
+
+# Rozpoznanie operacji i obliczenie wyniku
+if operacja == "+":
+    wynik = liczba1 + liczba2
+    print("Wynik:", wynik)
+elif operacja == "-":
+    wynik = liczba1 - liczba2
+    print("Wynik:", wynik)
+elif operacja == "*":
+    wynik = liczba1 * liczba2
+    print("Wynik:", wynik)
+elif operacja == "/":
+    if liczba2 != 0:
+        wynik = liczba1 / liczba2
+        print("Wynik:", wynik)
+    else:
+        print("Błąd: Dzielenie przez zero!")
+else:
+    print("Nieznana operacja!")
