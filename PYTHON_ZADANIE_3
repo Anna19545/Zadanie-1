@@ -1,0 +1,26 @@
+# Pobranie liczby ocen od użytkownika
+liczba_ocen = int(input("Podaj liczbę ocen: "))
+
+# Inicjalizacja sumy ocen
+suma = 0
+
+# Pętla do pobrania kolejnych ocen
+for i in range(liczba_ocen):
+    ocena = float(input(f"Podaj ocenę nr {i+1} (1-6): "))
+    # Można dodać walidację oceny, np. czy jest w zakresie 1-6
+    while ocena < 1 or ocena > 6:
+        print("Ocena musi być w zakresie od 1 do 6.")
+        ocena = float(input(f"Podaj ocenę nr {i+1} (1-6): "))
+    suma += ocena
+
+# Obliczenie średniej
+srednia = suma / liczba_ocen
+
+# Wyświetlenie średniej z dwoma miejscami po przecinku
+print(f"Średnia: {srednia:.2f}")
+
+# Sprawdzenie, czy uczeń zdał
+if srednia >= 3.0:
+    print("Uczeń zdał.")
+else:
+    print("Uczeń nie zdał.")
